@@ -1,0 +1,117 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: black;
+     background-image: url(/css/img/background.jpg);
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header,
+footer {
+     clear: both;
+     margin-left: 0 10px;
+     background-color: black;
+     color: gray;
+     padding-bottom: 2%;
+}
+
+section {
+     float: left;
+     width: 20%;
+     height: 150px;
+     border: 1px solid black;
+}
+
+img {
+     width: 100%;
+     height: 100%;
+}
+
+nav > h2 + ul li {
+     margin-bottom: 50px;
+}
+
+nav > h2 {
+     background-color: green;
+     margin-left: 10%;
+     margin-bottom: 50px;
+}
+
+/* phone */
+@media screen and (max-width: 809px) {
+     section {
+          float: none;
+          width: 100%;
+          height: 100%;
+     }     
+
+     nav {
+          display: none;
+     }
+}
+
+/* tablet */
+@media (min-width: 810px) and (max-width: 1439px) {
+     section {
+          background-color: orange;
+          float: none;
+          width: 60%;
+          height: 100%;
+     }
+     nav {
+          float: right;
+          width: 40%;
+     }
+
+     nav ul {
+          list-style: none;
+     }
+}
+
+/* laptop */
+@media (min-width: 1440px) {
+     section {
+          background-color: orange;
+          width: 30%;
+          border: 0 solid black;
+          padding: 2px;
+          height: 400px;
+     }
+     nav {
+          float: right;
+          width: 40%;
+     }
+
+     nav ul {
+          list-style: none;
+     }
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
